@@ -120,4 +120,12 @@ This is product context, not an instruction to build every screen in one task. I
 The user authorized a separate, empty Go + Gin scaffold at `../atm-nova-api`.
 This does not change the web's mockup-only scope: do not connect the projects or
 add backend functionality. Each repository has its own Git history and SSH origin.
-No deployment or remote push is authorized by the current local setup task.
+Development remains local with source versioned on GitHub. No deployment is authorized.
+
+## Git workflow
+
+- Use only two branches: `main` and `production`. Do not create feature, develop,
+  release, or other branches.
+- Use `main` for ongoing development and `production` for production releases.
+- Push or promote changes only within the user's requested scope. A push to
+  `main` does not authorize a production release or deployment.

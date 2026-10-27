@@ -60,3 +60,8 @@ Component references: [Radix Select](https://www.radix-ui.com/primitives/docs/co
 
 The repositories are independent. The web does not call the API and does not
 require it to run. Both projects remain local; no deployment is configured.
+
+## Branches
+
+Use only `main` for development and `production` for production releases.
+No deployment is configured.
