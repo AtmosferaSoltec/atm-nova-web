@@ -59,9 +59,12 @@ Component references: [Radix Select](https://www.radix-ui.com/primitives/docs/co
 - Local API folder: `../atm-nova-api` (Go + Gin, no endpoints).
 
 The repositories are independent. The web does not call the API and does not
-require it to run. Both projects remain local; no deployment is configured.
+require it to run.
+
+## Deployment
+
+Production runs on the VPS at `https://nova.atmosferast.com`. Pushing commits to `main` deploys nothing. Only a push to `production` (after the commit is already in `main`) runs `.github/workflows/deploy.yml`: lint, build, a static nginx image published to GHCR, then `docker compose` on the server. The prototype has no runtime configuration, so there is no `.env`.
 
 ## Branches
 
 Use only `main` for development and `production` for production releases.
-No deployment is configured.
